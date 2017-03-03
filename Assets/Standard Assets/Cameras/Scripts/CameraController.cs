@@ -18,7 +18,6 @@ public class CameraController : MonoBehaviour {
 	void Start () {
 		offset = new Vector3 (0, height, distance);
 		offsetforward = new Vector3 (0, 4, 0);
-
 	}
 	
 	// Update is called once per frame
