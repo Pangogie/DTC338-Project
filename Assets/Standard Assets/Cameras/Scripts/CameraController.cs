@@ -9,21 +9,22 @@ public class CameraController : MonoBehaviour {
 
 	public float height = 1f;
 	public float distance = 2f;
-	private Vector3 offsetX;
+	private Vector3 offset;
+	private Vector3 offsetforward;
 
 
 
 	// Use this for initialization
 	void Start () {
-		offsetX = new Vector3 (0, height, distance);
-
+		offset = new Vector3 (0, height, distance);
+		offsetforward = new Vector3 (0, 4, 0);
 
 	}
 	
 	// Update is called once per frame
 	void LateUpdate () {
-		offsetX = Quaternion.AngleAxis (Input.GetAxis("Horizontal") * turnSpeed, Vector3.up) * offsetX;
-		transform.position = Player.position + offsetX;
-		transform.LookAt (Player.position);
+		offset = Quaternion.AngleAxis (Input.GetAxis("Horizontal") * turnSpeed, Vector3.up) * offset;
+		transform.position = Player.position + offset;
+		transform.LookAt (Player.position + offsetforward);
 	}
 }
