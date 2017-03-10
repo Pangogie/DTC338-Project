@@ -11,9 +11,13 @@ Midterm/Final project for DTC338 (Engines).
 + Projectile and melee weapons
 + Boss in middle (end) of maze
 
+### Goals:
++ Get to center of maze
++ Defeat boss
+
 ### Mechanics:
 + Player
-  + [===  ] Multiple weapons
+  + [==== ] Multiple weapons
   + [=    ] Health
   + [==   ] Weapon reloading
   + [==   ] Weapon switching
@@ -32,42 +36,8 @@ Midterm/Final project for DTC338 (Engines).
   + [===  ] Unique attacks
 + Art
   + [==== ] Weapon animations
-  + [===  ] Player animations
+  + [=====] Player animations
   + [==   ] UI design
 + UI
   + [=    ] Health
-+ World
-
-### Goals:
-+ Get to center of maze
-+ Defeat boss
-
-### Story(?):
-
-# Progress
-
-+ Player
-  + [     ] Multiple weapons
-  + [     ] Health
-  + [     ] Weapon reloading
-  + [     ] Weapon switching
-+ Stealth
-  + [     ] Audio cues alert enemies
-  + [     ] Field of view detection
-+ Weapons
-  + [     ] Melee
-  + [     ] Projectiles
-  + [     ] Special weapons
-+ Enemies
-  + [     ] Enemy pathfinding
-  + [     ] Enemy spawning
-  + [     ] Dynamic enemy spawning
-+ Bosses
-  + [     ] Unique attacks
-+ Art
-  + [     ] Weapon animations
-  + [     ] Player animations
-  + [     ] UI design
-+ UI
-  + [     ] Health
 + World
