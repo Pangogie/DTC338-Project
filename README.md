@@ -2,7 +2,7 @@
 
 Midterm/Final project for DTC338 (Engines).
 
-# Ideas
+## Ideas
 
 ### Main Idea:
 + Work through maze
@@ -41,3 +41,16 @@ Midterm/Final project for DTC338 (Engines).
 + UI
   + [=    ] Health
 + World
+
+
+#### AI
++ Navmesh
++ Sphere collider for aggro trigger
+  + Stop following after a time being out of sphere
++ FoV/raytrace would work better, but harder to implement
+
+#### Melee
++ Arc trace hit detection
+
+#### Guns
++ Hitscan/raytrace
