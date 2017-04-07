@@ -6,7 +6,7 @@ using UnityEngine;
 [RequireComponent (typeof(Animator))]
 
 public class EnemyLocomotionAgent : MonoBehaviour {
-	Animation anim;
+	Animator anim;
 	UnityEngine.AI.NavMeshAgent agent;
 	Vector2 smoothDeltaPosition = Vector2.zero;
 	Vector2 velocity = Vector2.zero;
@@ -54,7 +54,7 @@ public class EnemyLocomotionAgent : MonoBehaviour {
 		//	transform.position = agent.nextPosition - 0.9f * worldDeltaPosition;
 
 		//Pull agent towards character.
-		if (worldDeltaPosition.magnitude > agent)
+		if (worldDeltaPosition.magnitude > agent.radius)
 			agent.nextPosition = transform.position + 0.9f * worldDeltaPosition;
 	}
 
