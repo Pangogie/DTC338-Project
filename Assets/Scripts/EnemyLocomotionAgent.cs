@@ -51,7 +51,7 @@ public class EnemyLocomotionAgent : MonoBehaviour {
 
 		//Pull character towards agent.
 		if (worldDeltaPosition.magnitude > agent.radius)
-			transform.position = agent.nextPosition - 0.9f * worldDeltaPosition;
+			transform.position = agent.nextPosition - 0.99f * worldDeltaPosition;
 
 		//Pull agent towards character.
 		//if (worldDeltaPosition.magnitude > agent.radius)
