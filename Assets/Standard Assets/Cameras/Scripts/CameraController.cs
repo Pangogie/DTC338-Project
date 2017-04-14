@@ -22,7 +22,7 @@ public class CameraController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void LateUpdate () {
-		offset = Quaternion.AngleAxis (Input.GetAxis("Horizontal") * turnSpeed, Vector3.up) * offset;
+		
 		transform.position = Player.position + offset;
 		transform.LookAt (Player.position + offsetforward);
 	}
