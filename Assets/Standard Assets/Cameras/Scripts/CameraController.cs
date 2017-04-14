@@ -23,7 +23,7 @@ public class CameraController : MonoBehaviour {
 	// Update is called once per frame
 	void LateUpdate () {
 		
-		transform.position = Player.position + offset;
-		transform.LookAt (Player.position + offsetforward);
+		//transform.position = Player.position + offset;
+		//transform.LookAt (Player.position + offsetforward);
 	}
 }

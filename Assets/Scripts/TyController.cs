@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TyController : MonoBehaviour {
 
+	int speed = 3;
 	Animator animator;
 
 	// Use this for initialization
@@ -17,8 +18,14 @@ public class TyController : MonoBehaviour {
 		float v = Input.GetAxis("Vertical");
 
 
-		animator.SetFloat("VSpeed",Input.GetAxis("Vertical"));
-		animator.SetFloat("HSpeed",Input.GetAxis("Horizontal"));
+		animator.SetFloat("VSpeed", Input.GetAxis("Vertical"));
+		animator.SetFloat("HSpeed", Input.GetAxis("Horizontal"));
+
+
+		if(Input.GetAxis("Mouse X") < 0)
+			transform.Rotate(Vector3.up * -speed);
+		if(Input.GetAxis("Mouse X") > 0)
+			transform.Rotate(Vector3.up * speed);
 
 	}
 
