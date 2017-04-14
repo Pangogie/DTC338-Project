@@ -58,13 +58,13 @@ public class EnemyLocomotionAgent : MonoBehaviour {
 
 		//Pull agent towards character.
 		//if (worldDeltaPosition.magnitude > agent.radius)
-		//	agent.nextPosition = transform.position + 0.9f * worldDeltaPosition;
+		//	agent.nextPosition = transform.position + 0.5f * worldDeltaPosition;
 	}
 
 	void OnAnimatorMove() {
 		//Update position based on animation movement using NavMesh.
-		Vector3 position = anim.rootPosition;
-		position.y = agent.nextPosition.y;
-		transform.position = position;
+		//Vector3 position = anim.rootPosition;
+		//position.y = agent.nextPosition.y;
+		//transform.position = position;
 	}
 }

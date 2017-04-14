@@ -32,13 +32,7 @@ public class EnemyNavPatrol : MonoBehaviour {
 		if (points.Length == 0)
 			return;
 
-        ExecuteAfterTime(3);
         agent.destination = points [destPoint].position;
 		destPoint = (destPoint + 1) % points.Length;
 	}
-
-    IEnumerator ExecuteAfterTime(float time)
-    {
-        yield return new WaitForSeconds(time);
-    }
 }
