@@ -38,6 +38,9 @@ public class EnemyLocomotionAgent : MonoBehaviour {
 
 		bool shouldMove = velocity.magnitude > 0.5f && agent.remainingDistance > agent.radius;
 
+        if (GetComponent<EnemyNavPatrol>().onPatrol)
+            shouldMove = true;
+
 		//Update animation parameters.
 		anim.SetBool("move", shouldMove);
 		anim.SetFloat ("velx", velocity.x);
