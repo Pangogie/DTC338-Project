@@ -15,11 +15,11 @@ public class TyController : MonoBehaviour {
 	void Update () {
 		float h = Input.GetAxis("Horizontal");
 		float v = Input.GetAxis("Vertical");
-		bool fire = Input.GetButtonDown("");
 
-		animator.SetFloat("",v);
-		animator.SetFloat("",h);
-		animator.SetBool("", fire);
+
+		animator.SetFloat("VSpeed",Input.GetAxis("Vertical"));
+		animator.SetFloat("HSpeed",Input.GetAxis("Horizontal"));
+
 	}
 
 	void OnCollisionEnter(Collision col) {
