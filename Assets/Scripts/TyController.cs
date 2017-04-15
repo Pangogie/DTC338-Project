@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class TyController : MonoBehaviour {
 
-	int speed = 3;
-	Animator animator;
+	public int turnspeed = 3;
+	public int speed = 4;
+	private Animator animator;
+	public Rigidbody rigidbody;
 
 	// Use this for initialization
 	void Start () {
@@ -23,10 +25,21 @@ public class TyController : MonoBehaviour {
 
 
 		if(Input.GetAxis("Mouse X") < 0)
-			transform.Rotate(Vector3.up * -speed);
+			transform.Rotate(Vector3.up * -turnspeed);
 		if(Input.GetAxis("Mouse X") > 0)
-			transform.Rotate(Vector3.up * speed);
+			transform.Rotate(Vector3.up * turnspeed);
 
+		if (v > 0) {
+			transform.position += transform.forward * speed * Time.deltaTime;
+		} else if (v < 0) {
+			transform.position -= transform.forward * speed * Time.deltaTime;
+		}
+
+		if (h > 0) {
+			transform.position += transform.right * speed * Time.deltaTime;
+		} else if (h < 0) {
+			transform.position -= transform.right * speed * Time.deltaTime;
+		}
 	}
 
 	void OnCollisionEnter(Collision col) {
