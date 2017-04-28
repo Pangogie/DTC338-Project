@@ -42,5 +42,11 @@ public class TyController : MonoBehaviour {
 		}
 	}
 
-}
+//<<<<<<< HEAD
+//=======
+	void OnCollisionEnter(Collision col) {
 
+	}
+//>>>> origin/master
+
+}

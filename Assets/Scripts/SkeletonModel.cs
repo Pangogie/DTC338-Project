@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SkeletonModel : MonoBehaviour {
     public bool onPatrol;
-    public int health = 0;
+    public int health;
     public int attackDamage;
 
 
@@ -28,4 +28,10 @@ public class SkeletonModel : MonoBehaviour {
 		newsystem.GetComponent<ParticleSystemController> ().TriggerParticles();
 		Destroy (gameObject);
 	}
+
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.collider.tag == "Projectile")
+            this.health--;
+    }
 }
