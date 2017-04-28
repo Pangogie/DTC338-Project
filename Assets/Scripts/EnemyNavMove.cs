@@ -14,6 +14,12 @@ public class EnemyNavMove : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		UnityEngine.AI.NavMeshAgent agent = GetComponent<UnityEngine.AI.NavMeshAgent> ();
+		agent.destination = goal.position;
+	}
+
+	void OnEnable() {
+		UnityEngine.AI.NavMeshAgent agent = GetComponent<UnityEngine.AI.NavMeshAgent> ();
+		agent.destination = goal.position;
 	}
 }
