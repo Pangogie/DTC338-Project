@@ -2,7 +2,7 @@
 
 Midterm/Final project for DTC338 (Engines).
 
-## Ideas
+## Original Ideas
 
 ### Main Idea:
 + Work through maze
