@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerModel : MonoBehaviour {
     public int health;
     public int attack;
+    public int chests = 0;
 
 
 	// Use this for initialization
@@ -16,4 +17,13 @@ public class PlayerModel : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.collider.tag == "Chest")
+        {
+            chests++;
+        }
+
+    }
 }

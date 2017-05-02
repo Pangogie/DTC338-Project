@@ -18,6 +18,7 @@ public class CameraController : MonoBehaviour {
 	void Start () {
 		offset = new Vector3 (0, height, distance);
 		offsetforward = new Vector3 (0, 4, 0);
+        Cursor.lockState = CursorLockMode.Locked;
 	}
 	
 	// Update is called once per frame
@@ -26,4 +27,15 @@ public class CameraController : MonoBehaviour {
 		//transform.position = Player.position + offset;
 		//transform.LookAt (Player.position + offsetforward);
 	}
+    
+    void Update()
+    {
+        if(Input.GetButtonDown("Escape"))
+        {
+            if (Cursor.lockState == CursorLockMode.Locked)
+                Cursor.lockState = CursorLockMode.None;
+            else if (Cursor.lockState == CursorLockMode.None)
+                Cursor.lockState = CursorLockMode.Locked;
+        }
+    }
 }

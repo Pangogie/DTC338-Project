@@ -13,6 +13,13 @@ public class EndLevel : MonoBehaviour {
 		yield return new WaitForSeconds(3);
 
 		if (other.tag == "Player")
-			UnityEngine.SceneManagement.SceneManager.LoadScene ("Scene2");
+        {
+            if (other.GetComponent<PlayerModel>().chests == 12)
+            {
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Scene2");
+                Application.Quit();
+            }
+        }
+
 	}
 }
