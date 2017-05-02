@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerModel : MonoBehaviour {
-    public int health;
+    public int health = 10;
     public int attack;
     public int chests = 0;
 
@@ -15,7 +15,8 @@ public class PlayerModel : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        if (health <= 0)
+            Die();
 	}
 
     void OnCollisionEnter(Collision other)
@@ -25,5 +26,16 @@ public class PlayerModel : MonoBehaviour {
             chests++;
         }
 
+    }
+
+    void OnCollisionStay(Collision other)
+    {
+        if (other.collider.tag == "Enemy")
+            health--;
+    }
+
+    void Die()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 }
